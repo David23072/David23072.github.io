@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LibroShow</title>
+  <link rel="stylesheet" href="./css/css.css" />
+
+</head>
+<body>
+  <header>
+    <h1 class="logo">LibroShow</h1>
+    <div class="nav-menu">
+      <button class="nav-btn">Inicio</button>
+      <button class="nav-btn">Pelis</button>
+      <button class="nav-btn">Anime</button>
+
+      <!-- Desplegable de géneros -->
+<select class="nav-select" id="genero-selector">
+  <option value="todos">Todos los géneros</option>
+  <option value="nuevos-libros">Nuevos</option>
+  <option value="proximamente-libros">Próximamente</option>
+  <option value="ficcion-libros">Ficción</option>
+  <option value="misterio-libros">Misterio</option>
+  <option value="romance-libros">Romance</option>
+</select>
+
+  </header>
+
+  <main>
+    <!-- Sección Nuevos -->
+    <section class="seccion-libros">
+      <h2>Nuevos</h2>
+      <div class="carrusel-container">
+        <button class="flecha izquierda" onclick="moverCircular(this, -1)">←</button>
+        <div class="carrusel" id="nuevos-libros"></div>
+        <button class="flecha derecha" onclick="moverCircular(this, 1)">→</button>
+      </div>
+    </section>
+
+    <!-- Sección Próximamente -->
+    <section class="seccion-libros">
+      <h2>Próximamente</h2>
+      <div class="carrusel-container">
+        <button class="flecha izquierda" onclick="moverCircular(this, -1)">←</button>
+        <div class="carrusel" id="proximamente-libros"></div>
+        <button class="flecha derecha" onclick="moverCircular(this, 1)">→</button>
+      </div>
+    </section>
+
+    <!-- Sección Ficción -->
+    <section class="seccion-libros">
+      <h2>Ficción</h2>
+      <div class="carrusel-container">
+        <button class="flecha izquierda" onclick="moverCircular(this, -1)">←</button>
+        <div class="carrusel" id="ficcion-libros"></div>
+        <button class="flecha derecha" onclick="moverCircular(this, 1)">→</button>
+      </div>
+    </section>
+
+    <!-- Sección Misterio -->
+    <section class="seccion-libros">
+      <h2>Misterio</h2>
+      <div class="carrusel-container">
+        <button class="flecha izquierda" onclick="moverCircular(this, -1)">←</button>
+        <div class="carrusel" id="misterio-libros"></div>
+        <button class="flecha derecha" onclick="moverCircular(this, 1)">→</button>
+      </div>
+    </section>
+
+    <!-- Sección Romance -->
+    <section class="seccion-libros">
+      <h2>Romance</h2>
+      <div class="carrusel-container">
+        <button class="flecha izquierda" onclick="moverCircular(this, -1)">←</button>
+        <div class="carrusel" id="romance-libros"></div>
+        <button class="flecha derecha" onclick="moverCircular(this, 1)">→</button>
+      </div>
+    </section>
+  </main>
+
+ <script src="./js/js.js"></script>
+<script src="./js/filtro.js"></script>
+
+  <script>
+    function moverCircular(boton, direccion) {
+      const carrusel = boton.parentElement.querySelector('.carrusel');
+      const items = carrusel.querySelectorAll('.libro');
+      if (items.length === 0) return;
+      if (direccion === 1) {
+        carrusel.appendChild(items[0]);
+      } else {
+        carrusel.insertBefore(items[items.length - 1], items[0]);
+      }
+    }
+
+    function filtrarGenero(genero) {
+      alert("Filtrando por: " + genero); // puedes reemplazar esto por un filtro real más adelante
+    }
+  </script>
+
+    <!-- Pie de página -->
+  <footer style="background-color: #011C40; color: white; padding: 1.5rem 2rem; text-align: center; margin-top: 2rem;">
+    <p>&copy; 2025 LibroShow. Todos los derechos reservados.</p>
+    <p><a href="mailto:contacto@libroshow.com" style="color: #A7EBF2; text-decoration: underline;">Contáctenos</a></p>
+  </footer>
+
+</body>
+</html>

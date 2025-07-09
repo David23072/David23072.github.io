@@ -1,0 +1,209 @@
+/* Paleta: Luna */
+:root {
+  --claro: #A7EBF2;
+  --medio: #54ACBF;
+  --azul: #26658C;
+  --oscuro: #023859;
+  --muy-oscuro: #011C40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--claro);
+  color: var(--muy-oscuro);
+}
+
+header {
+  background-color: var(--muy-oscuro);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-btn {
+  background-color: var(--oscuro);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  margin: 2rem 0 1rem;
+  font-size: 2.5rem;
+  color: var(--muy-oscuro);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.libros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.libro {
+  background-color: var(--medio);
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+  min-width: 130px;
+}
+
+.libro:hover {
+  transform: scale(1.05);
+}
+
+.libro img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: var(--azul);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: none;
+}
+
+.libro:hover .tooltip {
+  display: block;
+}
+
+.ver-mas {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.ver-mas button {
+  background-color: var(--azul);
+  color: white;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-btn {
+    font-size: 0.9rem;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.seccion-libros {
+  margin: 2rem 0;
+}
+
+.carrusel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carrusel {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.flecha {
+  background-color: #023859;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  z-index: 2;
+}
+
+
+    header {
+      background-color: #011C40;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-btn {
+      background-color: #023859;
+      color: white;
+      font-size: 1.1rem;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .nav-select {
+      font-size: 1rem;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    .nav-select:focus {
+      outline: 2px solid #54ACBF;
+    }
