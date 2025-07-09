@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LibroShow - Inicio</title>
+  <link rel="stylesheet" href="./css/css.css">
+  <style>
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .categoria {
+      background-color: var(--medio);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .categoria:hover {
+      transform: scale(1.05);
+    }
+
+    .categoria h2 {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+    }
+
+    footer {
+      background-color: var(--muy-oscuro);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 2rem;
+      margin-top: 3rem;
+    }
+
+    .categoria img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo" style="padding: 1rem 2rem; color: white; background-color: var(--muy-oscuro);">LibroShow</h1>
+  </header>
+
+  <main>
+    <div class="categorias">
+      <a href="./libros.html" class="categoria">
+        <img src="./img/libros.png" alt="Libros">
+        <h2>Libros</h2>
+      </a>
+      <a href="./pelis.html" class="categoria">
+        <img src="./img/pelis.png" alt="Pelis">
+        <h2>Pelis</h2>
+      </a>
+      <a href="./anime.html" class="categoria">
+        <img src="./img/anime.png" alt="Anime">
+        <h2>Anime</h2>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LibroShow. Todos los derechos reservados.</p>
+    <p><a href="mailto:contacto@libroshow.com" style="color: #A7EBF2; text-decoration: underline;">Contáctenos</a></p>
+  </footer>
+</body>
+</html>
